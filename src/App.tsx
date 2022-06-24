@@ -1,4 +1,5 @@
 import Add2 from "./components/Add2";
+import Counter from "./components/Counter";
 import SimpleName from "./components/SimpleName";
 
 const meinName = "Andre";
@@ -13,6 +14,7 @@ const HelloWorld: React.FC = () => {
 const App = () => {
   return (
     <>
+      <Counter />
       <Add2 />
       <SimpleName />
       <HelloWorld />
