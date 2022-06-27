@@ -6,11 +6,20 @@ interface BookListItemProps {
 
 export const BookListItem: React.FC<BookListItemProps> = ({ book }) => (
   <>
-    <p>{book.title}</p>
+    <p
+      style={{
+        cursor: "pointer",
+      }}
+      onClick={() => {
+        alert(`Price of the book is ${book.price}`);
+      }}
+    >
+      {book.title}
+    </p>
 
     <img width="100px" src={book.cover} alt="cover"></img>
     <span style={{ color: "red", fontStyle: "italic" }}>
-      (only {book.price}) BUY NOW!
+      (Click on the title to see the price!)
     </span>
   </>
 );
