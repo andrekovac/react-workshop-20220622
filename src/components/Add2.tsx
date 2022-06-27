@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 // let number = 2;
 
@@ -14,8 +14,10 @@ import { useState } from "react";
 
 const Add2: React.FC = () => {
   console.log("render");
-  const [number, setNumber] = useState<number>(5); // number bekommt initialen Wert 5
-  const [zahl, setZahl] = useState(10); // number bekommt initialen Wert 10
+  const [number, setNumber] = useState<number>(5); // initialer Wert 5
+  const [zahl, setZahl] = useState(10); // initialer Wert 10
+
+  const zahl3 = number * 2; // derived values
 
   // const state = useState(5);
   // const number = state[0]
@@ -34,6 +36,7 @@ const Add2: React.FC = () => {
       </button>
       <div>Number: {number}</div>
       <div>Zahl: {zahl}</div>
+      <div>Zahl 3: {zahl3}</div>
     </div>
   );
 };
