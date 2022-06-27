@@ -17,6 +17,10 @@ const Add2: React.FC = () => {
   const [number, setNumber] = useState<number>(5); // initialer Wert 5
   const [zahl, setZahl] = useState(10); // initialer Wert 10
 
+  useEffect(() => {
+    console.log("number changed!");
+  }, [number]);
+
   const zahl3 = number * 2; // derived values
 
   // const state = useState(5);
