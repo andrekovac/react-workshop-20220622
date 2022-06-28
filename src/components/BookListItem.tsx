@@ -2,17 +2,19 @@ import { Book } from "../models/book";
 
 interface BookListItemProps {
   book: Book;
+  onClick: () => void;
 }
 
-export const BookListItem: React.FC<BookListItemProps> = ({ book }) => (
+export const BookListItem: React.FC<BookListItemProps> = ({
+  book,
+  onClick,
+}) => (
   <>
     <p
       style={{
         cursor: "pointer",
       }}
-      onClick={() => {
-        alert(`Price of the book is ${book.price}`);
-      }}
+      onClick={onClick}
     >
       {book.title}
     </p>

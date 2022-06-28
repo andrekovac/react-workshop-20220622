@@ -13,7 +13,15 @@ export const BookList: React.FC<BookListProps> = ({ books }) => {
       {books?.length > 0 ? (
         <ul>
           {books.map((book) => {
-            return <BookListItem key={book.isbn} book={book}></BookListItem>;
+            return (
+              <BookListItem
+                key={book.isbn}
+                book={book}
+                onClick={() => {
+                  alert(`Price of the book is ${book.price}`);
+                }}
+              ></BookListItem>
+            );
           })}
         </ul>
       ) : (
