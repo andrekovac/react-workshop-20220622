@@ -20,7 +20,7 @@ export const BookList: React.FC<BookListProps> = ({ books }) => {
                 onClick={() => {
                   alert(`Price of the book is ${book.price}`);
                 }}
-              ></BookListItem>
+              />
             );
           })}
         </ul>
