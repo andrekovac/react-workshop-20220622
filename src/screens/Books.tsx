@@ -13,7 +13,7 @@ const Books: React.FC = () => {
           setFirstBook(book);
         }}
       />
-      <p>Erste Buch: {firstBook?.title}</p>
+      <p>Erstes Buch: {firstBook?.title}</p>
     </>
   );
 };

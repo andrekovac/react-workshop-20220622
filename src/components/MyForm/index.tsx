@@ -27,8 +27,9 @@ const MyForm: React.FC = () => {
           type="text"
           placeholder="Bitte den Namen einfügen"
           onChange={(event) => {
-            setName(event.target.value);
+            setName(event.target.value + "_");
           }}
+          // value={name}
         />
         <label htmlFor="email">Email</label>
         <input
@@ -36,8 +37,9 @@ const MyForm: React.FC = () => {
           type="email"
           placeholder="Deine Email Addresse"
           onChange={(event) => {
-            setEmail(event.target.value);
+            setEmail(event.target.value + "_");
           }}
+          value={email}
         />
         <label htmlFor="fileUpload">Foto</label>
         <input
