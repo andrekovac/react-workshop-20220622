@@ -1,12 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
+import useBooks from "../hooks/useBooks";
 import { Book } from "../models/book";
 import BookListItem from "./BookListItem";
 
-interface BookListProps {
-  books: Book[];
-}
+export const BookList: React.FC<{ onSuccess: (book: Book) => void }> = ({
+  onSuccess,
+}) => {
+  const books = useBooks();
 
-export const BookList: React.FC<BookListProps> = ({ books }) => {
+  useEffect(() => {
+    onSuccess(books[0]);
+  }, [books, onSuccess]);
+
   return (
     <>
       <h1>List of Books</h1>
