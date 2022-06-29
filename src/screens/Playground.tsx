@@ -1,8 +1,8 @@
 import { useState } from "react";
-import Add2 from "./Add2";
-import Counter from "./Counter";
-import DisplayName from "./DisplayName";
-import SimpleName from "./SimpleName";
+import Add2 from "../components/Add2";
+import Counter from "../components/Counter";
+import DisplayName from "../components/DisplayName";
+import SimpleName from "../components/SimpleName";
 
 const names = ["Luisa", "Max", "Tom", "Claudia"];
 

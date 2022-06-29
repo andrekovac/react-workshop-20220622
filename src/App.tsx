@@ -1,28 +1,26 @@
-import { useEffect, useState } from "react";
+import { Link, Route } from "react-router-dom";
+import Books from "./screens/Books";
+import Playground from "./screens/Playground";
 
-import BookList from "./components/BookList";
-import { Book } from "./models/book";
-
-const useBooks = () => {
-  const [books, setBooks] = useState<Book[]>([]);
-
-  useEffect(() => {
-    const fetchBooks = async () => {
-      const response = await fetch("http://localhost:4730/books");
-      const result = await response.json();
-      setBooks(result);
-    };
-
-    fetchBooks();
-  }, []);
-
-  return books;
-};
+import "./App.css";
 
 const App: React.FC = () => {
-  const books = useBooks();
-
-  return <BookList books={books} />;
+  return (
+    <>
+      <nav>
+        <Link to="/playground">Playground</Link>
+        <Link to="/books">Books</Link>
+      </nav>
+      <main>
+        <Route path="/playground">
+          <Playground />
+        </Route>
+        <Route path="/books">
+          <Books />
+        </Route>
+      </main>
+    </>
+  );
 };
 
 export default App;
