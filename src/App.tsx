@@ -3,6 +3,7 @@ import Books from "./screens/Books";
 import Playground from "./screens/Playground";
 
 import "./App.css";
+import MyForm from "./components/MyForm";
 
 const App: React.FC = () => {
   return (
@@ -18,6 +19,9 @@ const App: React.FC = () => {
         <Route path="/books">
           <Books />
         </Route>
+        <div style={{ padding: 20 }}>
+          <MyForm />
+        </div>
       </main>
     </>
   );
